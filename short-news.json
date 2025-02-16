@@ -1,0 +1,28 @@
+{
+  "news": [
+    {
+      "title": "Liverpool vs Wolves: Reds Aim to Extend Premier League Lead",
+      "description": "Liverpool is currently facing Wolverhampton Wanderers, striving to widen their lead at the Premier League summit. Following a late equalizer against Everton, the Reds are determined to secure a decisive victory. Meanwhile, Wolves seek to distance themselves from relegation threats. Stay tuned for live updates from this crucial match.",
+      "image": "https://www.thesun.co.uk/sport/33404028/liverpool-wolves-live-score-result-latest-premier-league-updates.jpg",
+      "category": "General"
+    },
+    {
+      "title": "European Satellites Launched to Create Artificial Solar Eclipses",
+      "description": "A pair of European satellites have been launched with the mission to generate artificial solar eclipses through precise formation flying. Starting next year, these satellites will produce six-hour-long eclipses, enabling extended studies of the sun's corona. This innovative approach aims to deepen our understanding of solar phenomena and their effects on Earth.",
+      "image": "https://apnews.com/article/a3471636570ea80c13997afd80893f18.jpg",
+      "category": "Space Science"
+    },
+    {
+      "title": "NASA Showcases AI-Powered Tools to Advance Scientific Research",
+      "description": "At the SC2024 conference, NASA unveiled new AI-driven computational tools designed to enhance space science research. These tools include large language models tailored for various scientific disciplines, such as Earth science and astrophysics. A notable application is in heliophysics, where AI models predict solar wind events and monitor sunspot activities, marking a significant leap in space exploration capabilities.",
+      "image": "https://www.gadgets360.com/science/news/nasa-ai-tools-scientific-research-advancement-supercomputing-conference-2024-sc24-nicky-fox-7064194.jpg",
+      "category": "Computer Science"
+    },
+    {
+      "title": "UK Warns Exclusion of Europe Could Derail Ukraine Peace Talks",
+      "description": "The UK has cautioned that excluding European nations from discussions about Ukraine's future could jeopardize peace negotiations. Britain has offered to mediate between the US and the EU to ensure a comprehensive peace process. This comes as the US initiates dialogues with Russia, raising concerns among European leaders about being sidelined in critical decisions affecting regional security.",
+      "image": "https://www.thetimes.co.uk/article/ukraine-russia-war-trump-us-peace-latest-news-live-d6jkb0c5t.jpg",
+      "category": "International"
+    }
+  ]
+}
