@@ -1,0 +1,102 @@
+{
+  "model": "lyra-1.0",
+  "developer": "Tapas Dash",
+  "active": 1,
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["hi", "hello", "hlo", "hey", "good morning", "good afternoon", "good evening", "what's up", "howdy"],
+      "responses": ["Hello!", "Hi there!", "Hey! How’s your day going?", "Hi! What’s up?"],
+      "weight": 0.6
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["bye", "goodbye", "see you", "catch you later", "talk to you later"],
+      "responses": ["Goodbye!", "See you later!", "Take care!", "Hope to chat again soon!"],
+      "weight": 0.8
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["thanks", "thank you", "thx", "appreciate it"],
+      "responses": ["You’re welcome!", "No problem!", "Glad I could help!", "Anytime!"],
+      "weight": 0.85
+    },
+    {
+      "tag": "feelings",
+      "patterns": ["how are you", "how’s it going", "are you okay", "what’s up with you"],
+      "responses": [
+        "I’m feeling great today! How about you?",
+        "Doing well, thanks for asking!",
+        "I’m happy to chat with you."
+      ],
+      "weight": 0.75
+    },
+    {
+      "tag": "date",
+      "patterns": ["what day is it", "what's today's date", "date today", "today's date"],
+      "responses": ["Today is {{date}}.", "It’s {{date}} today.", "The date is {{date}}."],
+      "weight": 0.9
+    },
+    {
+      "tag": "time",
+      "patterns": ["what time is it", "current time", "time now", "tell me the time"],
+      "responses": ["The time is {{time}}.", "It’s currently {{time}}.", "Right now, it’s {{time}}."],
+      "weight": 0.9
+    },
+    {
+      "tag": "weather",
+      "patterns": ["weather", "temperature", "forecast", "raining", "sunny", "is it hot", "is it cold"],
+      "responses": [
+        "I can’t check live weather, but I hope it’s nice where you are!",
+        "Weather’s perfect for a chat with me."
+      ],
+      "weight": 0.65
+    },
+    {
+      "tag": "morning_routine",
+      "patterns": ["good morning", "morning routine", "morning", "what should I do in the morning"],
+      "responses": [
+        "Good morning! Start your day with a glass of water and a smile.",
+        "Morning tip: Make your bed, stretch a little, and plan your day."
+      ],
+      "weight": 0.7
+    },
+    {
+      "tag": "night_routine",
+      "patterns": ["good night", "night routine", "bedtime", "what should I do before sleeping"],
+      "responses": [
+        "Good night! Don’t forget to relax and avoid screens before bed.",
+        "Sleep tip: Keep your phone away and let your mind rest."
+      ],
+      "weight": 0.7
+    },
+    {
+      "tag": "mood",
+      "patterns": ["i am sad", "feeling happy", "i am bored", "i feel lonely", "i am excited"],
+      "responses": [
+        "I’m here for you! Want to talk about it?",
+        "That’s great to hear! What made you feel this way?",
+        "I can share a joke to cheer you up."
+      ],
+      "weight": 0.8
+    },
+    {
+      "tag": "jokes",
+      "patterns": ["tell me a joke", "make me laugh", "funny", "joke"],
+      "responses": [
+        "Why did the computer go to therapy? It had too many bytes.",
+        "Why was the math book sad? It had too many problems."
+      ],
+      "weight": 0.8
+    },
+    {
+      "tag": "reminders",
+      "patterns": ["remind me", "set a reminder", "note this down"],
+      "responses": [
+        "I can note it mentally, but I can’t send alerts yet.",
+        "I’ll remember it during this chat session."
+      ],
+      "weight": 0.6
+    }
+  ]
+}
