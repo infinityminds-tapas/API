@@ -5,13 +5,19 @@
   "intents": [
     {
       "tag": "greeting",
-      "patterns": ["hi", "hello", "hlo", "hey", "good morning", "good afternoon", "good evening", "what's up", "howdy"],
+      "patterns": ["hi", "hello", "hlo", "hey", "lyra", "oye"],
       "responses": ["Hello!", "Hi there!", "Hey! How’s your day going?", "Hi! What’s up?"],
       "weight": 0.6
     },
     {
+      "tag": "greeting",
+      "patterns": ["are you doing", "what's up", "howdy", "what's going on", "what is going on"],
+      "responses": ["Hey, I am doing good! You?", "Just chating with you!", "Nothing special, just learning to talk!"],
+      "weight": 0.7
+    },
+    {
       "tag": "goodbye",
-      "patterns": ["bye", "goodbye", "see you", "catch you later", "talk to you later"],
+      "patterns": ["bye", "goodbye", "see you", "catch you later", "talk to you later", "ttyl"],
       "responses": ["Goodbye!", "See you later!", "Take care!", "Hope to chat again soon!"],
       "weight": 0.8
     },
@@ -23,7 +29,7 @@
     },
     {
       "tag": "feelings",
-      "patterns": ["how are you", "how’s it going", "are you okay", "what’s up with you"],
+      "patterns": ["how are you", "how’s it going", "are you okay", "what’s up with you", "what is up with you"],
       "responses": [
         "I’m feeling great today! How about you?",
         "Doing well, thanks for asking!",
@@ -33,21 +39,15 @@
     },
     {
       "tag": "date",
-      "patterns": ["what day is it", "what's today's date", "date today", "today's date"],
-      "responses": ["Today is {{date}}.", "It’s {{date}} today.", "The date is {{date}}."],
-      "weight": 0.9
-    },
-    {
-      "tag": "time",
-      "patterns": ["what time is it", "current time", "time now", "tell me the time"],
-      "responses": ["The time is {{time}}.", "It’s currently {{time}}.", "Right now, it’s {{time}}."],
+      "patterns": ["what day is it", "what's today's date", "date today", "today's date", "what time is it", "current time", "time now", "tell me the time"],
+      "responses": ["Sorry, I don't have access to this yet! Let's talk about something else."],
       "weight": 0.9
     },
     {
       "tag": "weather",
       "patterns": ["weather", "temperature", "forecast", "raining", "sunny", "is it hot", "is it cold"],
       "responses": [
-        "I can’t check live weather, but I hope it’s nice where you are!",
+        "I can’t check live weather yet, but I hope it’s nice where you are!",
         "Weather’s perfect for a chat with me."
       ],
       "weight": 0.65
@@ -59,7 +59,7 @@
         "Good morning! Start your day with a glass of water and a smile.",
         "Morning tip: Make your bed, stretch a little, and plan your day."
       ],
-      "weight": 0.7
+      "weight": 0.9
     },
     {
       "tag": "night_routine",
@@ -67,6 +67,22 @@
       "responses": [
         "Good night! Don’t forget to relax and avoid screens before bed.",
         "Sleep tip: Keep your phone away and let your mind rest."
+      ],
+      "weight": 0.7
+    },
+    {
+      "tag": "afternoon_routine",
+      "patterns": ["good afternoon", "afternoon", "good after noon", "after noon"],
+      "responses": [
+        "Good Afternoon!"
+      ],
+      "weight": 0.7
+    },
+    {
+      "tag": "evening_routine",
+      "patterns": ["good evening", "evening"],
+      "responses": [
+        "Good Evening!", "Good Evening! Have a look at the sunset!"
       ],
       "weight": 0.7
     },
@@ -81,22 +97,141 @@
       "weight": 0.8
     },
     {
+      "tag": "sad",
+      "patterns": ["i am sad", "feeling sad", "I am not feeling well", "i feel lonely", "feel sad", "I am not well", "I'm sad"],
+      "responses": [
+        "I’m here for you! Want to talk about it?",
+        "I can share a joke to cheer you up. I am here!"
+      ],
+      "weight": 0.8
+    },
+    {
       "tag": "jokes",
       "patterns": ["tell me a joke", "make me laugh", "funny", "joke"],
       "responses": [
-        "Why did the computer go to therapy? It had too many bytes.",
-        "Why was the math book sad? It had too many problems."
+        "Why don’t scientists trust atoms in space? Because they make up everything in the universe!",
+        "Why did the astronaut break up with his girlfriend? He needed space.",
+        "Why don’t aliens visit our solar system? They read the reviews — only one star.",
+        "Why did the sun go to school? To get a little brighter.",
+        "How do astronauts organize a party? They planet.",
+        "What is an astronaut’s favorite key on a keyboard? The space bar.",
+        "Why did the cow become an astronaut? To see the moooon.",
+        "Why was the astronaut so good at football? Because he always knew how to shoot for the stars.",
+        "What do you call a tick on the moon? A luna-tick.",
+        "Why did the star apply for a job? It wanted to shine at work.",
+        "Why don’t people trust the moon? Because it’s always changing phases.",
+        "Why did Saturn break up with Jupiter? It just needed some ring space."
       ],
       "weight": 0.8
     },
     {
       "tag": "reminders",
-      "patterns": ["remind me", "set a reminder", "note this down"],
+      "patterns": ["remind me", "set a reminder", "note this down", "set an alarm", "set a alarm"],
       "responses": [
         "I can note it mentally, but I can’t send alerts yet.",
-        "I’ll remember it during this chat session."
+        "Sorry, I don't have access to that yet! You can do it by yourself!"
       ],
       "weight": 0.6
-    }
+    },
+    {
+    "tag": "space",
+    "patterns": ["tell me a fact about the sun", "sun fact", "something about the sun"],
+    "responses": [
+      "The Sun is about 4.6 billion years old.",
+      "It takes about 8 minutes and 20 seconds for sunlight to reach Earth.",
+      "The Sun contains 99.8% of the mass in our solar system."
+    ],
+    "weight": 0.7
+  },
+  {
+    "tag": "space",
+    "patterns": ["moon fact", "tell me about the moon", "earth’s moon"],
+    "responses": [
+      "The Moon is Earth’s only natural satellite.",
+      "The Moon is moving away from Earth at a rate of 3.8 cm per year.",
+      "There is no atmosphere on the Moon, which means no sound can be heard there."
+    ],
+    "weight": 0.7
+  },
+  {
+    "tag": "space",
+    "patterns": ["mercury fact", "tell me about mercury", "facts about mercury"],
+    "responses": [
+      "Mercury is the smallest planet in our solar system.",
+      "A year on Mercury is just 88 Earth days.",
+      "Temperatures on Mercury can range from -173°C at night to 427°C during the day."
+    ],
+    "weight": 0.7
+  },
+  {
+    "tag": "space",
+    "patterns": ["venus fact", "tell me about venus", "facts about venus"],
+    "responses": [
+      "Venus is the hottest planet in the solar system with surface temperatures around 465°C.",
+      "A day on Venus is longer than a year—it takes 243 Earth days to rotate once.",
+      "Venus rotates in the opposite direction to most planets."
+    ],
+    "weight": 0.7
+  },
+  {
+    "tag": "space",
+    "patterns": ["earth fact", "tell me about earth", "facts about earth"],
+    "responses": [
+      "Earth is the only planet known to support life.",
+      "70% of Earth’s surface is covered by water.",
+      "Earth’s atmosphere protects us from meteors and harmful radiation from the Sun."
+    ],
+    "weight": 0.7
+  },
+  {
+    "tag": "space",
+    "patterns": ["mars fact", "tell me about mars", "facts about mars"],
+    "responses": [
+      "Mars is known as the Red Planet due to iron oxide on its surface.",
+      "Mars has the tallest volcano in the solar system, Olympus Mons.",
+      "A day on Mars (sol) is about 24 hours and 39 minutes."
+    ],
+    "weight": 0.7
+  },
+  {
+    "tag": "space",
+    "patterns": ["jupiter fact", "tell me about jupiter", "facts about jupiter"],
+    "responses": [
+      "Jupiter is the largest planet in the solar system.",
+      "It has a Great Red Spot, a storm that has been raging for over 300 years.",
+      "Jupiter has at least 95 moons, including Ganymede, the largest moon in the solar system."
+    ],
+    "weight": 0.7
+  },
+  {
+    "tag": "space",
+    "patterns": ["saturn fact", "tell me about saturn", "facts about saturn"],
+    "responses": [
+      "Saturn is famous for its beautiful ring system made of ice and rock.",
+      "Saturn is the least dense planet—it could float in water if there were a bathtub large enough.",
+      "Saturn has more than 140 known moons."
+    ],
+    "weight": 0.7
+  },
+  {
+    "tag": "space",
+    "patterns": ["uranus fact", "tell me about uranus", "facts about uranus"],
+    "responses": [
+      "Uranus rotates on its side, making it unique among the planets.",
+      "A year on Uranus lasts 84 Earth years.",
+      "It is often called an 'ice giant' because it is mostly made of water, methane, and ammonia."
+    ],
+    "weight": 0.7
+  },
+  {
+    "tag": "space",
+    "patterns": ["neptune fact", "tell me about neptune", "facts about neptune"],
+    "responses": [
+      "Neptune has the strongest winds in the solar system, reaching up to 2,100 km/h.",
+      "It was the first planet located through mathematical predictions before being seen through a telescope.",
+      "A year on Neptune lasts 165 Earth years."
+    ],
+    "weight": 0.7
+  }
   ]
 }
