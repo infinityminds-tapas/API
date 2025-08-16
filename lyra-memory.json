@@ -16,6 +16,24 @@
       "weight": 0.7
     },
     {
+      "tag": "ai",
+      "patterns": ["your name", "name your", "who are you", "who're you", "are you what"],
+      "responses": ["Hi, I am Lyra!", "I am Lyra developed to understand the universe!", "Me... Lyra! Yee!"],
+      "weight": 0.9
+    },
+    {
+      "tag": "ai",
+      "patterns": ["your creator", "made you", "created you", "your owner", "your developer"],
+      "responses": ["Tapas!", "He is Tapas!", "I was got developed by Tapas on a friday afternoon!"],
+      "weight": 0.9
+    },
+    {
+      "tag": "love",
+      "patterns": ["love you", "made you", "created you", "your owner", "your developer"],
+      "responses": ["I love you as a human being!", "I don't have feelings but I love you as human!", "I love humans! I will help them always."],
+      "weight": 0.9
+    },
+    {
       "tag": "goodbye",
       "patterns": ["bye", "goodbye", "see you", "catch you later", "talk to you later", "ttyl"],
       "responses": ["Goodbye!", "See you later!", "Take care!", "Hope to chat again soon!"],
