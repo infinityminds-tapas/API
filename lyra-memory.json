@@ -28,8 +28,8 @@
       "weight": 0.9
     },
     {
-      "tag": "love",
-      "patterns": ["love you", "made you", "created you", "your owner", "your developer"],
+      "tag": "ai",
+      "patterns": ["love you", "love me"],
       "responses": ["I love you as a human being!", "I don't have feelings but I love you as human!", "I love humans! I will help them always."],
       "weight": 0.9
     },
